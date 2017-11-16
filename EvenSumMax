@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public void  evenSum() {
+   //varible assigments 
+    
+     int inputCount =0;
+     int sumEven =0;
+     int maxEven = 0;
+     int newNum ;
+       
+    System.out.print("how many integers? ");
+      
+    //Scanner input set up 
+    Scanner userInput = new Scanner(System.in); 
+         
+        inputCount = userInput.nextInt(); 
+    
+
+    
+    for( int x = 0; x < inputCount; x++) {
+        
+// hold interger   
+        System.out.print("next integer? ");
+        
+            newNum = userInput.nextInt(); 
+              
+ // even check       
+                if ( (newNum/2)*2 == newNum) {
+            
+                sumEven = newNum + sumEven;
+            
+                   }   
+// max check        
+                 if  (newNum > maxEven && ((newNum/2)*2 == newNum)){
+             
+                 maxEven = newNum;
+            
+                     }        
+     
+       }       
+       System.out.println("even sum = "+ sumEven); 
+       
+       System.out.println("even max = "+ maxEven);       
+}
+
+
+
+
+
