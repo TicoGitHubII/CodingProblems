@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class CalculateLine{
+    
+    public static void main (String args[]){
+        
+        // Scanner object
+        Scanner userInput = new Scanner(System.in);
+        
+        System.out.println("This program calculates y coordinates for a line.");
+        
+        int m;
+        int b;
+       
+        int y;
+        
+  
+            System.out.print("Enter slope (m): "); 
+            m = userInput.nextInt();
+            
+            
+            System.out.print("Enter intercept (b): ");
+            b = userInput.nextInt();
+        
+        int x; 
+        
+         do {
+            
+            System.out.print("Enter x: ");
+            x = userInput.nextInt();
+             if ( x == -1){
+                 break;
+             }
+            y = (m * x) + b;
+             
+            System.out.println( "f(" + x +") = " + y);
+            
+            x++;
+              } while (x > 0);
+                  
+     }
+
+
+    }
